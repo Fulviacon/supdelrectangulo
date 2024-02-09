@@ -22,13 +22,21 @@ const SupRectangulo = () => {
     };
 
     const calcularSuperficie = () => {
-        const area = parseFloat(rectangulo.ancho) * parseFloat(rectangulo.alto);
-        if (!isNaN(area)) {
-            setSuperficie(area);
-        } else {
-            setSuperficie(0); // Manejar valores no numéricos
-        }
-    };
+      // Convertir las cadenas a números
+      const anchoNumero = parseFloat(rectangulo.ancho);
+      const altoNumero = parseFloat(rectangulo.alto);
+  
+      // Verificar si las conversiones fueron exitosas
+      if (!isNaN(anchoNumero) && !isNaN(altoNumero)) {
+          const resultado = anchoNumero * altoNumero;
+          setSuperficie(resultado);
+      } else {
+          // Manejar valores no numéricos
+          setSuperficie(0);
+      }
+  };
+  
+    
 
     return (
         <div>
