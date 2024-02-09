@@ -7,7 +7,7 @@ function App() {
       return(  
       <>   
   
-      <ConversorGrados/> 
+      {/*<ConversorGrados/> */}
         <SupRectangulo/>
  </> 
 )
